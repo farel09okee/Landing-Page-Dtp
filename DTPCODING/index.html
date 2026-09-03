@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AgriSense - IoT Monitoring Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <div class="dashboard">
+
+        <!-- Background Image -->
+        <div class="bg-image"></div>
+
+        <!-- Sidebar Background -->
+        <div class="sidebar-bg"></div>
+
+        <!-- Sidebar Menu -->
+        <div class="menu-home">HOME</div>
+        <div class="menu-riwayat">RIWAYAT</div>
+        <div class="menu-monitor">MONITOR</div>
+        <div class="menu-perangkat">PERANGKAT</div>
+        <div class="menu-pengaturan">PENGATURAN</div>
+        <div class="menu-tentang">TENTANG</div>
+
+        <!-- Header Labels -->
+        <div class="label-iot">IoT Monitoring</div>
+        <div class="label-agritech">Agritech</div>
+
+        <!-- ===== KARTU STATUS ===== -->
+        <!-- Soil Sensor -->
+        <div class="card-sensor"></div>
+        <div class="device-soil">Soil Sensor</div>
+        <div class="value-soil">74%</div>
+        <div class="status-on">● On</div>
+
+        <!-- Snorkel / Pompa -->
+        <div class="card-snorkel"></div>
+        <div class="device-snorkel">Snorkel</div>
+        <div class="value-snorkel">32%</div>
+        <div class="status-off1">● Off</div>
+
+        <!-- Buzzer -->
+        <div class="card-buzzer"></div>
+        <div class="device-buzzer">Buzzer</div>
+        <div class="value-buzzer">Standby</div>
+        <div class="status-off2">● Off</div>
+
+        <!-- ===== GRAFIK ===== -->
+
+        <!-- Grafik Air Dalam Tangki -->
+        <div class="chart-water-bg"></div>
+        <div class="label-water">Air Dalam Tangki</div>
+
+        <div class="axis-y-water">
+            60<br />45<br />30<br />0
+        </div>
+
+        <div class="bar-water-1"></div>
+        <div class="bar-water-2"></div>
+        <div class="bar-water-3"></div>
+        <div class="bar-water-4"></div>
+        <div class="bar-water-5"></div>
+        <div class="bar-water-6"></div>
+        <div class="bar-water-7"></div>
+
+        <div class="axis-x-water">10:00 10:05 10:10 10:15 10:20 10:25</div>
+
+        <!-- Grafik Kelembapan Tanah -->
+        <div class="chart-soil-bg"></div>
+        <div class="label-soil">Kelembapan Tanah</div>
+
+        <div class="axis-y-soil">
+            60<br />45<br />30<br />0
+        </div>
+
+        <div class="bar-soil-1"></div>
+        <div class="bar-soil-2"></div>
+        <div class="bar-soil-3"></d iv>
+        <div class="bar-soil-4"></div>
+        <div class="bar-soil-5"></div>
+        <div class="bar-soil-6"></div>
+        <div class="bar-soil-7"></div>
+
+        <div class="axis-x-soil">10:00 10:05 10:10 10:15 10:20 10:25</div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,735 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1a1a2e;
+    font-family: 'Inter', sans-serif;
+}
+
+/* ===== FRAME UTAMA ===== */
+.dashboard {
+    width: 800px;
+    height: 453px;
+    background: rgba(255, 255, 255, 0.69);
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== BACKGROUND IMAGE ===== */
+.bg-image {
+    width: 864px;
+    height: 576px;
+    position: absolute;
+    left: -12px;
+    top: -44px;
+    object-fit: cover;
+    opacity: 0.85;
+    background: linear-gradient(135deg, #1a472a, #2d6a4f, #40916c);
+}
+
+/* ===== SIDEBAR KANAN ===== */
+.sidebar-bg {
+    width: 84px;
+    height: 421px;
+    position: absolute;
+    left: 707px;
+    top: 12px;
+    opacity: 0.50;
+    background: #D9D9D9;
+    border-radius: 15px;
+}
+
+/* ===== MENU SIDEBAR ===== */
+.menu-home {
+    position: absolute;
+    left: 724px;
+    top: 82px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-riwayat {
+    position: absolute;
+    left: 718px;
+    top: 136px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-monitor {
+    position: absolute;
+    left: 722px;
+    top: 194px;
+    color: #39BE42;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-perangkat {
+    position: absolute;
+    left: 711px;
+    top: 256px;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-pengaturan {
+    position: absolute;
+    left: 711px;
+    top: 312px;
+    color: white;
+    font-size: 11px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-tentang {
+    position: absolute;
+    left: 720px;
+    top: 362px;
+    color: white;
+    font-size: 11px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Hover efek menu */
+.menu-home:hover,
+.menu-riwayat:hover,
+.menu-perangkat:hover,
+.menu-pengaturan:hover,
+.menu-tentang:hover {
+    color: #39BE42;
+}
+
+/* ===== HEADER LABEL ===== */
+.label-iot {
+    position: absolute;
+    left: 31px;
+    top: 21px;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    color: #39BE42;
+    z-index: 2;
+}
+
+.label-agritech {
+    position: absolute;
+    left: 30px;
+    top: 47px;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    color: #39BE42;
+    z-index: 2;
+}
+
+/* ===== KARTU STATUS PERANGKAT ===== */
+.card-sensor {
+    width: 239px;
+    height: 72px;
+    position: absolute;
+    left: 455px;
+    top: 121px;
+    background: rgba(168, 166, 166, 0.65);
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.card-snorkel {
+    width: 239px;
+    height: 72px;
+    position: absolute;
+    left: 455px;
+    top: 208px;
+    background: rgba(168, 166, 166, 0.65);
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.card-buzzer {
+    width: 239px;
+    height: 72px;
+    position: absolute;
+    left: 455px;
+    top: 291px;
+    background: rgba(168, 166, 166, 0.65);
+    border-radius: 10px;
+    z-index: 2;
+}
+
+/* Nama perangkat */
+.device-soil {
+    position: absolute;
+    left: 473px;
+    top: 126px;
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    z-index: 3;
+}
+
+.device-snorkel {
+    position: absolute;
+    left: 473px;
+    top: 213px;
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    z-index: 3;
+}
+
+.device-buzzer {
+    position: absolute;
+    left: 473px;
+    top: 296px;
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    z-index: 3;
+}
+
+/* Status */
+.status-on {
+    position: absolute;
+    left: 476px;
+    top: 158px;
+    color: #39BE42;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    z-index: 3;
+}
+
+.status-off1 {
+    position: absolute;
+    left: 476px;
+    top: 245px;
+    color: #ff6b6b;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    z-index: 3;
+}
+
+.status-off2 {
+    position: absolute;
+    left: 476px;
+    top: 328px;
+    color: #ff6b6b;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    z-index: 3;
+}
+
+/* Nilai persentase */
+.value-soil {
+    position: absolute;
+    left: 640px;
+    top: 126px;
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    z-index: 3;
+}
+
+.value-snorkel {
+    position: absolute;
+    left: 640px;
+    top: 213px;
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    z-index: 3;
+}
+
+.value-buzzer {
+    position: absolute;
+    left: 640px;
+    top: 296px;
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    z-index: 3;
+}
+
+/* ===== GRAFIK ===== */
+.chart-soil-bg {
+    width: 419px;
+    height: 180px;
+    position: absolute;
+    left: 24px;
+    top: 253px;
+    background: rgba(168, 166, 166, 0.65);
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.chart-water-bg {
+    width: 419px;
+    height: 180px;
+    position: absolute;
+    left: 24px;
+    top: 67px;
+    background: rgba(168, 166, 166, 0.65);
+    border-radius: 10px;
+    z-index: 2;
+}
+
+/* Label grafik */
+.label-soil {
+    position: absolute;
+    left: 40px;
+    top: 269px;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    z-index: 3;
+}
+
+.label-water {
+    position: absolute;
+    left: 40px;
+    top: 83px;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    z-index: 3;
+}
+
+/* Sumbu Y */
+.axis-y-soil {
+    width: 11px;
+    height: 92px;
+    position: absolute;
+    left: 36px;
+    top: 308px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 8px;
+    font-weight: 600;
+    line-height: 12px;
+    font-family: 'Inter', sans-serif;
+    z-index: 3;
+}
+
+.axis-y-water {
+    width: 11px;
+    height: 92px;
+    position: absolute;
+    left: 36px;
+    top: 122px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 8px;
+    font-weight: 600;
+    line-height: 12px;
+    font-family: 'Inter', sans-serif;
+    z-index: 3;
+}
+
+/* Sumbu X */
+.axis-x-soil {
+    position: absolute;
+    left: 68px;
+    top: 414px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 7px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 5px;
+    z-index: 3;
+    white-space: nowrap;
+}
+
+.axis-x-water {
+    position: absolute;
+    left: 68px;
+    top: 228px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 7px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 5px;
+    z-index: 3;
+    white-space: nowrap;
+}
+
+/* ===== BATANG GRAFIK ===== */
+/* Grafik Kelembapan Tanah */
+.bar-soil-1 {
+    width: 40.09px;
+    height: 15px;
+    position: absolute;
+    left: 71px;
+    top: 411px;
+    transform: rotate(-90deg);
+    transform-origin: top left;
+    background: #39BE42;
+    border-radius: 10px;
+    z-index: 3;
+}
+.bar-soil-2 {
+    width: 88.48px;
+    height: 15px;
+    position: absolute;
+    left: 71px;
+    top: 225px;
+    transform: rotate(-90deg);
+    transform-origin: top left;
+    background: #39BE42;
+    border-radius: 10px;
+    z-index: 3;
+}
+.bar-soil-3 {
+    width: 32.87px;
+    height: 15px;
+    position: absolute;
+    left: 194.07px;
+    top: 410px;
+    transform: rotate(-90deg);
+    transform-origin: top left;
+    background: #39BE42;
+    border-radius: 10px;
+    z-index: 3;
+}
+.bar-soil-4 {
+    width: 70.93px;
+    height: 15px;
+    position: absolute;
+    left: 133px;
+    top: 410px;
+    transform: rotate(-90deg);
+    transform-origin: top left;
+    background: #39BE42;
+    border-radius: 10px;
+    z-index: 3;
+}
+.bar-soil-5 {
+    width: 17.15px;
+    height: 15px;
+    position: absolute;
+    left: 312px;
+    top: 411px;
+    transform: rotate(-90deg);
+    transform-origin: top left;
+    background: #39BE42;
+    border-radius: 10px;
+    z-index: 3;
+}
+.bar-soil-6 {
+    width: 23.06px;
+    height: 15px;
+    position: absolute;
+    left: 252px;
+    top: 412px;
+    transform: rotate(-90deg);
+    transform-origin: top left;
+    background: #39BE42;
+    border-radius: 10px;
+    z-index: 3;
+}
+.bar-soil-7 {
+    width: 71.98px;
+    height: 15px;
+    position: absolute;
+    left: 375px;
+    top: 411px;
+    transform: rotate(-90deg);
+    transform-origin: top left;
+    background: #39BE42;
+    border-radius: 10px;
+    z-index: 3;
+}
+
+/* Grafik Air Dalam Tangki */
+.bar-water-1 {
+    width: 40.09px;
+    height: 15px;
+    position: absolute;
+    left: 71px;
+    top: 225px;
+    transform: rotate(-90deg);
+    transform-origin: top left;
+    background: #39BE42;
+    border-radius: 10px;
+    z-index: 3;
+}
+.bar-water-2 {
+    width: 88.48px;
+    height: 15px;
+    position: absolute;
+    left: 71px;
+    top: 225px;
+    transform: rotate(-90deg);
+    transform-origin: top left;
+    background: #39BE42;
+    border-radius: 10px;
+    z-index: 3;
+}
+.bar-water-3 {
+    width: 32.87px;
+    height: 15px;
+    position: absolute;
+    left: 194.07px;
+    top: 224px;
+    transform: rotate(-90deg);
+    transform-origin: top left;
+    background: #39BE42;
+    border-radius: 10px;
+    z-index: 3;
+}
+.bar-water-4 {
+    width: 70.93px;
+    height: 15px;
+    position: absolute;
+    left: 133px;
+    top: 224px;
+    transform: rotate(-90deg);
+    transform-origin: top left;
+    background: #39BE42;
+    border-radius: 10px;
+    z-index: 3;
+}
+.bar-water-5 {
+    width: 17.15px;
+    height: 15px;
+    position: absolute;
+    left: 312px;
+    top: 225px;
+    transform: rotate(-90deg);
+    transform-origin: top left;
+    background: #39BE42;
+    border-radius: 10px;
+    z-index: 3;
+}
+.bar-water-6 {
+    width: 23.06px;
+    height: 15px;
+    position: absolute;
+    left: 252px;
+    top: 226px;
+    transform: rotate(-90deg);
+    transform-origin: top left;
+    background: #39BE42;
+    border-radius: 10px;
+    z-index: 3;
+}
+.bar-water-7 {
+    width: 86.60px;
+    height: 15px;
+    position: absolute;
+    left: 375px;
+    top: 225px;
+    transform: rotate(-90deg);
+    transform-origin: top left;
+    background: #39BE42;
+    border-radius: 10px;
+    z-index: 3;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 820px) {
+    .dashboard {
+        width: 95vw;
+        height: auto;
+        min-height: 453px;
+        padding: 16px;
+    }
+
+    .bg-image {
+        display: none;
+    }
+
+    .sidebar-bg,
+    .menu-home,
+    .menu-riwayat,
+    .menu-monitor,
+    .menu-perangkat,
+    .menu-pengaturan,
+    .menu-tentang {
+        display: none;
+    }
+
+    .label-iot {
+        position: relative;
+        left: auto;
+        top: auto;
+        margin-bottom: 4px;
+    }
+
+    .label-agritech {
+        position: relative;
+        left: auto;
+        top: auto;
+        margin-bottom: 12px;
+    }
+
+    /* Kartu status */
+    .card-sensor,
+    .card-snorkel,
+    .card-buzzer {
+        position: relative;
+        left: auto;
+        top: auto;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto 8px auto;
+    }
+
+    .device-soil,
+    .device-snorkel,
+    .device-buzzer {
+        position: relative;
+        left: auto;
+        top: auto;
+        padding: 8px 12px;
+        font-size: 18px;
+    }
+
+    .status-on,
+    .status-off1,
+    .status-off2 {
+        position: relative;
+        left: auto;
+        top: auto;
+        float: right;
+        margin-top: -28px;
+        margin-right: 16px;
+    }
+
+    .value-soil,
+    .value-snorkel,
+    .value-buzzer {
+        position: relative;
+        left: auto;
+        top: auto;
+        float: right;
+        margin-top: -30px;
+        margin-right: 80px;
+        font-size: 20px;
+    }
+
+    /* Grafik */
+    .chart-water-bg,
+    .chart-soil-bg {
+        position: relative;
+        left: auto;
+        top: auto;
+        width: 100%;
+        height: 160px;
+        margin-bottom: 8px;
+    }
+
+    .label-water,
+    .label-soil {
+        position: relative;
+        left: auto;
+        top: auto;
+        padding: 6px 12px;
+    }
+
+    .axis-y-water,
+    .axis-y-soil {
+        position: absolute;
+        left: 8px;
+        top: 20px;
+    }
+
+    .axis-x-water,
+    .axis-x-soil {
+        position: absolute;
+        left: 30px;
+        bottom: 4px;
+        font-size: 5px;
+        letter-spacing: 2px;
+    }
+
+    .bar-water-1,
+    .bar-water-2,
+    .bar-water-3,
+    .bar-water-4,
+    .bar-water-5,
+    .bar-water-6,
+    .bar-water-7,
+    .bar-soil-1,
+    .bar-soil-2,
+    .bar-soil-3,
+    .bar-soil-4,
+    .bar-soil-5,
+    .bar-soil-6,
+    .bar-soil-7 {
+        transform: rotate(0deg);
+        width: 15px;
+        height: auto;
+        position: absolute;
+        bottom: 20px;
+        border-radius: 4px 4px 0 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard {
+        padding: 10px;
+        border-radius: 12px;
+    }
+
+    .chart-water-bg,
+    .chart-soil-bg {
+        height: 130px;
+    }
+
+    .device-soil,
+    .device-snorkel,
+    .device-buzzer {
+        font-size: 14px;
+    }
+
+    .value-soil,
+    .value-snorkel,
+    .value-buzzer {
+        font-size: 16px;
+        margin-right: 60px;
+    }
+
+    .label-water,
+    .label-soil {
+        font-size: 11px;
+    }
+}
